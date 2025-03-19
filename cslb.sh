@@ -43,7 +43,7 @@ az network lb rule create --resource-group rg-cslb-front --lb-name cslb --name m
 # Set the subscription context to Azure Subscription B
 az account set --name '<subscription B name>'
 
-# Attach the network interface card to the load balancer
+# Create and attach a network interface card to the load balancer
 az network nic create --name nic-back --resource-group rg-cslb-back --vnet vnet-back --subnet back --lb-address-pool '/subscriptions/<subscription A ID>/resourceGroups/rg-cslb-front/providers/Microsoft.Network/loadBalancers/cslb/backendAddressPools/pool-back'
 
 ###########
